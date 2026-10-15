@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>{% block title %}Nexum Weddings – Premium Hochzeitsfotografie NRW{% endblock %}</title>
+    <meta name="description" content="{% block meta_description %}Nexum Weddings – Ihr Premium-Studio für Hochzeitsfotografie & Hochzeitsfilm in NRW. Emotionale Momente, zeitlos festgehalten.{% endblock %}">
+    <meta name="keywords" content="Hochzeitsfotografie, Hochzeitsfilm, NRW, Hochzeitsfotograf, Verlobung, Wedding Photography, Nexum Weddings">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="{% block og_title %}Nexum Weddings – Premium Hochzeitsfotografie NRW{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}Emotionale Hochzeitsfotografie & Hochzeitsfilm aus NRW. Euer schönster Tag, zeitlos festgehalten.{% endblock %}">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="de_DE">
+
+    <!-- Preconnect für Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    {% block head_extra %}{% endblock %}
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader__text">Nexum Weddings</div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar__inner">
+            <a href="/" class="navbar__logo" id="nav-logo">
+                Nexum <span>Weddings</span>
+            </a>
+
+            <div class="navbar__menu" id="nav-menu">
+                <a href="#hero" class="navbar__link" id="nav-home">Startseite</a>
+                <a href="#portfolio" class="navbar__link" id="nav-portfolio">Portfolio</a>
+                <a href="#leistungen" class="navbar__link" id="nav-leistungen">Leistungen</a>
+                <a href="#kontakt" class="navbar__cta" id="nav-kontakt">Kontakt</a>
+            </div>
+
+            <div class="navbar__hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#hero" class="mobile-menu__link">Startseite</a>
+        <a href="#portfolio" class="mobile-menu__link">Portfolio</a>
+        <a href="#leistungen" class="mobile-menu__link">Leistungen</a>
+        <a href="#kontakt" class="mobile-menu__link">Kontakt</a>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <div class="footer__brand-name">Nexum <span>Weddings</span></div>
+                    <p class="footer__brand-text">
+                        Emotionale Hochzeitsfotografie & Hochzeitsfilm aus NRW. 
+                        Wir halten eure schönsten Momente fest – authentisch, elegant und zeitlos.
+                    </p>
+                </div>
+
+                <div class="footer__col">
+                    <h4 class="footer__heading">Navigation</h4>
+                    <a href="#hero" class="footer__link">Startseite</a>
+                    <a href="#portfolio" class="footer__link">Portfolio</a>
+                    <a href="#leistungen" class="footer__link">Leistungen</a>
+                    <a href="#kontakt" class="footer__link">Kontakt</a>
+                </div>
+
+                <div class="footer__col">
+                    <h4 class="footer__heading">Leistungen</h4>
+                    <a href="#leistungen" class="footer__link">Hochzeitsfotografie</a>
+                    <a href="#leistungen" class="footer__link">Hochzeitsfilm</a>
+                    <a href="#leistungen" class="footer__link">Foto & Film Kombi</a>
+                    <a href="#leistungen" class="footer__link">Verlobungsshooting</a>
+                </div>
+
+                <div class="footer__col">
+                    <h4 class="footer__heading">Kontakt & Impressum</h4>
+                    <p class="footer__contact-intro">Kontaktiert uns direkt über:</p>
+                    <a href="https://wa.me/4915208591872?text=Hallo%20Nexum%20Weddings%2C%20ich%20m%C3%B6chte%20eine%20Anfrage%20f%C3%BCr%20unsere%20Hochzeit%20stellen." class="footer__link" target="_blank" rel="noopener">
+                        <span class="footer__link-icon">💬</span> WhatsApp: +49 1520 8591872
+                    </a>
+                    <a href="mailto:info@nexumstudios.de" class="footer__link">
+                        <span class="footer__link-icon">✉</span> info@nexumstudios.de
+                    </a>
+                    <a href="https://instagram.com/nexumweddings" class="footer__link" target="_blank" rel="noopener">
+                        <span class="footer__link-icon">📷</span> Instagram
+                    </a>
+                    <span class="footer__link" style="opacity: 0.85; cursor: default;">
+                        <span class="footer__link-icon">📍</span> Hülsmeyerstraße 16
+                    </span>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p>&copy; 2026 Nexum Weddings · Hülsmeyerstraße 16 · Alle Rechte vorbehalten.</p>
+                <p>Ein Projekt von <a href="https://nexumstudios.de" target="_blank" rel="noopener">Nexum Studios</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox__close" id="lightbox-close" aria-label="Schließen">&times;</button>
+        <button class="lightbox__nav lightbox__nav--prev" id="lightbox-prev" aria-label="Vorheriges Bild">&#8249;</button>
+        <button class="lightbox__nav lightbox__nav--next" id="lightbox-next" aria-label="Nächstes Bild">&#8250;</button>
+        <img src="" alt="Vollbild-Ansicht" id="lightbox-img">
+    </div>
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    {% block scripts_extra %}{% endblock %}
+</body>
+</html>
